@@ -79,164 +79,9 @@
     background:linear-gradient(180deg,var(--gold-2),var(--gold) 50%,#d99a00);
     color:#3a2600;box-shadow:0 8px 26px rgba(245,179,1,.45),inset 0 1px 0 rgba(255,255,255,.5);
   }
-  
-  /* =========================================
-   BUTTON DAFTAR & PUTAR SEKARANG - BLUE
-   ========================================= */
-
-.hero-cta .btn-gold{
-  position:relative;
-  overflow:hidden;
-
-  /* WARNA NORMAL */
-  background:linear-gradient(
-    180deg,
-    #3d8bff 0%,
-    #1e6ef5 50%,
-    #0a47c2 100%
-  );
-
-  color:#ffffff;
-
-  border:1px solid rgba(255,255,255,.15);
-
-  box-shadow:
-    0 8px 25px rgba(30,110,245,.40),
-    inset 0 1px 0 rgba(255,255,255,.35);
-
-  transition:
-    background .25s ease,
-    color .25s ease,
-    transform .2s ease,
-    box-shadow .25s ease,
-    filter .25s ease;
-}
-
-
-/* =========================================
-   SAAT CURSOR MENYENTUH
-   ========================================= */
-
-.hero-cta .btn-gold:hover{
-  background:#ffffff;
-
-  color:#1e6ef5;
-
-  transform:translateY(-4px) scale(1.03);
-
-  box-shadow:
-    0 12px 30px rgba(30,110,245,.35),
-    0 0 25px rgba(255,255,255,.25);
-
-  filter:none;
-}
-
-
-/* ICON IKUT BIRU SAAT HOVER */
-.hero-cta .btn-gold:hover .icon{
-  color:#1e6ef5;
-}
-
-
-/* =========================================
-   SAAT DITEKAN / DISENTUH
-   ========================================= */
-
-.hero-cta .btn-gold:active{
-  background:#ffffff;
-
-  color:#1e6ef5;
-
-  transform:translateY(1px) scale(.96);
-
-  box-shadow:
-    0 4px 12px rgba(30,110,245,.25),
-    inset 0 2px 5px rgba(0,0,0,.08);
-}
-
-
-/* ICON SAAT DITEKAN */
-.hero-cta .btn-gold:active .icon{
-  color:#1e6ef5;
-}
-
-
-/* =========================================
-   EFEK CAHAYA BERGERAK
-   ========================================= */
-
-.hero-cta .btn-gold::before{
-  content:"";
-
-  position:absolute;
-  top:0;
-  left:-120%;
-
-  width:70%;
-  height:100%;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.35),
-    transparent
-  );
-
-  transform:skewX(-20deg);
-
-  transition:left .6s ease;
-
-  pointer-events:none;
-}
-
-
-.hero-cta .btn-gold:hover::before{
-  left:140%;
-}
-
-
-/* =========================================
-   TEKS & ICON TETAP DI ATAS EFEK
-   ========================================= */
-
-.hero-cta .btn-gold .icon,
-.hero-cta .btn-gold{
-  -webkit-tap-highlight-color:transparent;
-}
-  
   .btn-gold:hover{filter:brightness(1.06)}
-  .btn-lg{padding:15px 30px;font-size:-5rem;border-radius:25px}
+  .btn-lg{padding:15px 30px;font-size:1rem;border-radius:12px}
   .btn-block{width:100%}
-  
-  /* ===== ANIMASI BUTTON DAFTAR & PUTAR ===== */
-.hero-cta .btn-gold{
-  position:relative;
-  overflow:hidden;
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    filter .2s ease;
-}
-
-/* Saat cursor menyentuh */
-.hero-cta .btn-gold:hover{
-  transform:translateY(-5px) scale(1.03);
-  filter:brightness(1.1);
-
-  box-shadow:
-    0 12px 32px rgba(145,79,1,.05),
-    0 0 20px rgba(255,193,7,.25),
-    inset 0 1px 0 rgba(255,255,255,.6);
-}
-
-/* Saat ditekan / disentuh di HP */
-.hero-cta .btn-gold:active{
-  transform:translateY(1px) scale(.96);
-
-  box-shadow:
-    0 5px 14px rgba(245,179,1,.35),
-    inset 0 2px 5px rgba(0,0,0,.18);
-}
 
   /* ===== Hero ===== */
   .hero{padding:56px 0 40px;text-align:center;position:relative;overflow:hidden}
@@ -246,272 +91,6 @@
     color:var(--gold);border:1px solid rgba(245,179,1,.4);background:rgba(245,179,1,.08);
     text-transform:uppercase;
   }
-/* =========================================
-   LOGO LIGABANDAR - BLUE ANIMATION
-   ========================================= */
-
-.hero-logo{
-  position:relative;
-  width:min(250px, 68vw);
-  margin:38px auto 24px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  padding:16px 22px;
-  border-radius:18px;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(30,110,245,.12),
-      rgba(4,10,23,.92) 70%
-    );
-
-  border:1px solid rgba(30,110,245,.22);
-
-  box-shadow:
-    0 0 25px rgba(30,110,245,.08),
-    inset 0 0 25px rgba(30,110,245,.04);
-
-  overflow:hidden;
-
-  animation:
-    logoFloat 4s ease-in-out infinite,
-    logoBoxGlow 3.5s ease-in-out infinite;
-}
-
-
-/* LOGO */
-.hero-logo img{
-  position:relative;
-  z-index:2;
-
-  width:100%;
-  max-width:230px;
-  height:auto;
-
-  /* Ubah logo menjadi nuansa biru */
-  filter:
-    grayscale(1)
-    brightness(.85)
-    sepia(1)
-    hue-rotate(180deg)
-    saturate(5)
-    drop-shadow(0 0 8px rgba(30,110,245,.35))
-    drop-shadow(0 0 22px rgba(30,110,245,.18));
-
-  animation:
-    logoPulse 3s ease-in-out infinite;
-
-  transition:
-    transform .3s ease,
-    filter .3s ease;
-}
-
-
-/* GLOW BIRU DI BELAKANG LOGO */
-.hero-logo::before{
-  content:"";
-  position:absolute;
-
-  width:150px;
-  height:150px;
-
-  left:50%;
-  top:50%;
-
-  transform:translate(-50%,-50%);
-
-  background:rgba(30,110,245,.14);
-
-  border-radius:50%;
-
-  filter:blur(35px);
-
-  animation:logoAura 3s ease-in-out infinite;
-
-  z-index:0;
-}
-
-
-/* CAHAYA MENYAPU LOGO */
-.hero-logo::after{
-  content:"";
-
-  position:absolute;
-
-  top:-40%;
-  left:-80%;
-
-  width:45%;
-  height:180%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(80,150,255,.08),
-      rgba(120,180,255,.35),
-      rgba(80,150,255,.08),
-      transparent
-    );
-
-  transform:skewX(-20deg);
-
-  filter:blur(3px);
-
-  z-index:3;
-
-  pointer-events:none;
-
-  animation:logoShine 4.5s ease-in-out infinite;
-}
-
-
-/* =========================================
-   ANIMASI LOGO
-   ========================================= */
-
-@keyframes logoFloat{
-
-  0%,100%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(-5px);
-  }
-
-}
-
-
-@keyframes logoPulse{
-
-  0%,100%{
-
-    transform:scale(1);
-
-    filter:
-      grayscale(1)
-      brightness(.82)
-      sepia(1)
-      hue-rotate(180deg)
-      saturate(5)
-      drop-shadow(0 0 7px rgba(30,110,245,.30))
-      drop-shadow(0 0 18px rgba(30,110,245,.15));
-  }
-
-  50%{
-
-    transform:scale(1.025);
-
-    filter:
-      grayscale(1)
-      brightness(1)
-      sepia(1)
-      hue-rotate(180deg)
-      saturate(6)
-      drop-shadow(0 0 12px rgba(30,110,245,.55))
-      drop-shadow(0 0 30px rgba(30,110,245,.25));
-  }
-
-}
-
-
-@keyframes logoAura{
-
-  0%,100%{
-    opacity:.45;
-    transform:translate(-50%,-50%) scale(.85);
-  }
-
-  50%{
-    opacity:.85;
-    transform:translate(-50%,-50%) scale(1.15);
-  }
-
-}
-
-
-@keyframes logoBoxGlow{
-
-  0%,100%{
-
-    border-color:rgba(30,110,245,.18);
-
-    box-shadow:
-      0 0 18px rgba(30,110,245,.05),
-      inset 0 0 20px rgba(30,110,245,.025);
-  }
-
-  50%{
-
-    border-color:rgba(30,110,245,.38);
-
-    box-shadow:
-      0 0 35px rgba(30,110,245,.12),
-      inset 0 0 30px rgba(30,110,245,.06);
-  }
-
-}
-
-
-@keyframes logoShine{
-
-  0%,20%{
-    left:-80%;
-    opacity:0;
-  }
-
-  35%{
-    opacity:.25;
-  }
-
-  55%{
-    left:130%;
-    opacity:.65;
-  }
-
-  70%,100%{
-    left:130%;
-    opacity:0;
-  }
-
-}
-
-
-/* =========================================
-   HP
-   ========================================= */
-
-@media(max-width:640px){
-
-  .hero-logo{
-    width:min(260px,82vw);
-    margin:28px auto 20px;
-    padding:18px 22px;
-    border-radius:18px;
-  }
-
-  .hero-logo img{
-    max-width:210px;
-  }
-
-}
-
-
-/* REDUCE MOTION */
-@media(prefers-reduced-motion:reduce){
-
-  .hero-logo,
-  .hero-logo img,
-  .hero-logo::before,
-  .hero-logo::after{
-    animation:none;
-  }
-
-}
   .hero h1{
     font-family:'Archivo Black',sans-serif;
     font-size:clamp(1.9rem,5.5vw,3.2rem);
@@ -522,374 +101,16 @@
   }
   .hero h1 em{font-style:normal;color:var(--gold)}
   .hero p{color:var(--text-dim);max-width:560px;margin:10px auto 28px;font-size:.98rem;line-height:1.7}
-  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;}
+  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .trust-row{
-    display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px;
+    display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:34px;
   }
-  
-  /* ===== RUNNING TEXT PREMIUM SHIMMER ===== */
-.running-text{
-  width:100%;
-  max-width:900px;
-  margin:22px auto 0;
-  overflow:hidden;
-  position:relative;
-
-  border:1px solid rgba(245,179,1,.22);
-  border-radius:999px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(13,33,80,.72),
-      rgba(4,10,23,.94),
-      rgba(13,33,80,.72)
-    );
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.25),
-    inset 0 1px 0 rgba(255,255,255,.035);
-
-  /* Supaya kilatan tidak keluar dari kotak */
-  isolation:isolate;
-}
-
-
-/* ===== KILAUAN YANG MENYAPU ===== */
-.running-text::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-35%;
-  width:18%;
-  height:100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(255,193,7,.03) 25%,
-      rgba(255,215,100,.16) 50%,
-      rgba(255,193,7,.03) 75%,
-      transparent 100%
-    );
-
-  transform:skewX(-20deg);
-  pointer-events:none;
-  z-index:5;
-
-  animation:runningShimmer 5.5s ease-in-out infinite;
-}
-
-
-/* ===== GARIS KILAT TIPIS ===== */
-.running-text::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-20%;
-  width:10%;
-  height:1px;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,215,100,.45),
-    transparent
-  );
-
-  filter:blur(.5px);
-  z-index:6;
-
-  animation:runningSpark 4.2s ease-in-out infinite;
-}
-
-
-/* ===== TRACK ===== */
-.running-track{
-  display:flex;
-  width:max-content;
-  white-space:nowrap;
-
-  animation:runningMove 25s linear infinite;
-
-  position:relative;
-  z-index:2;
-}
-
-
-/* ===== ITEM ===== */
-.running-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  padding:11px 28px;
-
-  color:rgba(147,167,204,.92);
-
-  font-size:.78rem;
-  font-weight:500;
-  letter-spacing:.2px;
-
-  position:relative;
-}
-
-
-/* ===== TEKS LIGABANDAR ===== */
-.running-item strong{
-  color:#e8ad16;
-
-  text-shadow:
-    0 0 5px rgba(245,179,1,.18);
-
-  animation:textGoldPulse 3.8s ease-in-out infinite;
-}
-
-
-/* ===== ICON ✦ ===== */
-.running-icon{
-  color:#d9a313;
-  font-size:.9rem;
-  flex-shrink:0;
-
-  text-shadow:
-    0 0 4px rgba(245,179,1,.25);
-
-  animation:
-    runningIconBlink 2.8s ease-in-out infinite,
-    runningIconGlow 2.8s ease-in-out infinite;
-}
-
-
-/* ===== GERAK RUNNING TEXT ===== */
-@keyframes runningMove{
-  from{
-    transform:translateX(0);
-  }
-
-  to{
-    transform:translateX(-50%);
-  }
-}
-
-
-/* ===== KILAUAN MENYAPU ===== */
-@keyframes runningShimmer{
-
-  0%{
-    left:-35%;
-    opacity:0;
-  }
-
-  10%{
-    opacity:.25;
-  }
-
-  35%{
-    opacity:.7;
-  }
-
-  55%{
-    left:110%;
-    opacity:.15;
-  }
-
-  100%{
-    left:110%;
-    opacity:0;
-  }
-}
-
-
-/* ===== KILAT TIPIS DI BAGIAN ATAS ===== */
-@keyframes runningSpark{
-
-  0%,20%{
-    left:-20%;
-    opacity:0;
-  }
-
-  35%{
-    opacity:.35;
-  }
-
-  50%{
-    left:110%;
-    opacity:.55;
-  }
-
-  60%,100%{
-    left:110%;
-    opacity:0;
-  }
-}
-
-
-/* ===== PULSE TEKS GOLD ===== */
-@keyframes textGoldPulse{
-
-  0%,100%{
-    color:#dca817;
-    text-shadow:
-      0 0 3px rgba(245,179,1,.10);
-  }
-
-  50%{
-    color:#f1c13a;
-    text-shadow:
-      0 0 7px rgba(245,179,1,.22);
-  }
-}
-
-
-/* ===== KEDIP ICON ===== */
-@keyframes runningIconBlink{
-
-  0%,100%{
-    opacity:.65;
-  }
-
-  45%{
-    opacity:1;
-  }
-
-  52%{
-    opacity:.35;
-  }
-
-  60%{
-    opacity:.9;
-  }
-}
-
-
-/* ===== GLOW ICON ===== */
-@keyframes runningIconGlow{
-
-  0%,100%{
-    transform:scale(1);
-    text-shadow:
-      0 0 3px rgba(245,179,1,.15);
-  }
-
-  50%{
-    transform:scale(1.08);
-    text-shadow:
-      0 0 7px rgba(245,179,1,.35);
-  }
-}
-
-
-/* ===== HP ===== */
-@media(max-width:640px){
-
-  .running-text{
-    border-radius:12px;
-    margin-top:18px;
-  }
-
-  .running-item{
-    padding:10px 22px;
-    font-size:.72rem;
-  }
-
-  .running-text::after{
-    width:24%;
-  }
-}
-
-/* HP */
-@media(max-width:640px){
-  .running-text{
-    border-radius:12px;
-    margin-top:18px;
-  }
-
-  .running-item{
-    padding:10px 22px;
-    font-size:.72rem;
-  }
-}
-   .trust-item{
+  .trust-item{
     display:flex;align-items:center;gap:9px;
     padding:10px 16px;border-radius:999px;font-size:.8rem;font-weight:600;
     background:rgba(13,33,80,.6);border:1px solid var(--line-soft);color:var(--text);
   }
-/* ===== TRUST ICON BLUE PREMIUM ===== */
-.trust-item .icon{
-  color:#3d8bff;
-  flex-shrink:0;
-
-  filter:
-    drop-shadow(0 0 4px rgba(30,110,245,.55))
-    drop-shadow(0 0 10px rgba(30,110,245,.25));
-
-  animation:
-    trustIconPulse 3s ease-in-out infinite;
-
-  transition:
-    color .3s ease,
-    filter .3s ease,
-    transform .3s ease;
-}
-
-/* Efek saat cursor diarahkan */
-.trust-item:hover .icon{
-  color:#75adff;
-
-  filter:
-    drop-shadow(0 0 6px rgba(61,139,255,.9))
-    drop-shadow(0 0 16px rgba(30,110,245,.55))
-    drop-shadow(0 0 28px rgba(30,110,245,.25));
-
-  transform:scale(1.08);
-}
-
-
-/* ===== PULSE + KILAUAN BIRU ===== */
-@keyframes trustIconPulse{
-
-  0%,100%{
-    color:#3d8bff;
-
-    filter:
-      drop-shadow(0 0 3px rgba(30,110,245,.45))
-      drop-shadow(0 0 8px rgba(30,110,245,.20));
-
-    transform:scale(1);
-  }
-
-  45%{
-    color:#4f9aff;
-
-    filter:
-      drop-shadow(0 0 5px rgba(61,139,255,.75))
-      drop-shadow(0 0 12px rgba(30,110,245,.40));
-  }
-
-  55%{
-    color:#8bc0ff;
-
-    filter:
-      drop-shadow(0 0 7px rgba(120,180,255,1))
-      drop-shadow(0 0 18px rgba(30,110,245,.60))
-      drop-shadow(0 0 28px rgba(30,110,245,.25));
-
-    transform:scale(1.06);
-  }
-
-  65%{
-    color:#3d8bff;
-
-    filter:
-      drop-shadow(0 0 4px rgba(30,110,245,.55))
-      drop-shadow(0 0 10px rgba(30,110,245,.25));
-
-    transform:scale(1);
-  }
-
-}
+  .trust-item .icon{color:var(--gold)}
 
   /* ===== Sections ===== */
   section{padding:36px 0}
@@ -898,418 +119,6 @@
     display:inline-flex;align-items:center;gap:12px;color:var(--gold);
     font-weight:700;letter-spacing:2px;font-size:.8rem;text-transform:uppercase;
   }
-  
-  /* =========================================
-   ANIMASI INFORMASI SITUS LIGABANDAR
-   BIRU → MERAH → HIJAU → KUNING → UNGU
-   ========================================= */
-
-.info-card-head{
-  animation: infoColorBlink 3s infinite;
-}
-
-/* Icon mahkota ikut berubah warna */
-.info-card-head .icon{
-  animation: infoIconColor 3s infinite;
-}
-
-@keyframes infoColorBlink{
-
-  /* BIRU */
-  0%, 15%{
-    color:#3d8bff;
-    text-shadow:
-      0 0 5px rgba(61,139,255,.8),
-      0 0 12px rgba(61,139,255,.55),
-      0 0 22px rgba(61,139,255,.25);
-  }
-
-  /* MERAH */
-  20%, 35%{
-    color:#ff3b3b;
-    text-shadow:
-      0 0 5px rgba(255,59,59,.8),
-      0 0 12px rgba(255,59,59,.55),
-      0 0 22px rgba(255,59,59,.25);
-  }
-
-  /* HIJAU */
-  40%, 55%{
-    color:#20e68a;
-    text-shadow:
-      0 0 5px rgba(32,230,138,.8),
-      0 0 12px rgba(32,230,138,.55),
-      0 0 22px rgba(32,230,138,.25);
-  }
-
-  /* KUNING */
-  60%, 75%{
-    color:#ffd21f;
-    text-shadow:
-      0 0 5px rgba(255,210,31,.8),
-      0 0 12px rgba(255,210,31,.55),
-      0 0 22px rgba(255,210,31,.25);
-  }
-
-  /* UNGU */
-  80%, 95%{
-    color:#b66cff;
-    text-shadow:
-      0 0 5px rgba(182,108,255,.8),
-      0 0 12px rgba(182,108,255,.55),
-      0 0 22px rgba(182,108,255,.25);
-  }
-
-  /* KEDIP SEBELUM MENGULANG */
-  97%,100%{
-    color:#ffffff;
-    text-shadow:0 0 2px rgba(255,255,255,.5);
-  }
-}
-
-
-@keyframes infoIconColor{
-
-  0%,15%{
-    color:#3d8bff;
-    filter:drop-shadow(0 0 6px rgba(61,139,255,.8));
-  }
-
-  20%,35%{
-    color:#ff3b3b;
-    filter:drop-shadow(0 0 6px rgba(255,59,59,.8));
-  }
-
-  40%,55%{
-    color:#20e68a;
-    filter:drop-shadow(0 0 6px rgba(32,230,138,.8));
-  }
-
-  60%,75%{
-    color:#ffd21f;
-    filter:drop-shadow(0 0 6px rgba(255,210,31,.8));
-  }
-
-  80%,95%{
-    color:#b66cff;
-    filter:drop-shadow(0 0 7px rgba(182,108,255,.9));
-  }
-
-  97%,100%{
-    color:#ffffff;
-    filter:drop-shadow(0 0 3px rgba(255,255,255,.5));
-  }
-}
-
-/* =========================================
-   INFO TABLE - ICON BIRU BERKEDIP
-   TEXT PUTIH
-   ========================================= */
-
-/* TEXT LABEL SEMUA PUTIH */
-.info-row dt{
-  color:#ffffff;
-}
-
-/* TEXT ISI SEMUA PUTIH */
-.info-row dd{
-  color:#ffffff;
-}
-
-/* ICON BIRU + GLOW + ANIMASI */
-.info-row dt .icon{
-  color:#3d8bff;
-
-  flex-shrink:0;
-
-  filter:
-    drop-shadow(0 0 4px rgba(61,139,255,.65))
-    drop-shadow(0 0 9px rgba(30,110,245,.35));
-
-  animation:infoIconBlueBlink 2.2s ease-in-out infinite;
-
-  transition:
-    color .3s ease,
-    filter .3s ease,
-    transform .3s ease;
-}
-
-
-/* =========================================
-   ANIMASI ICON BIRU
-   ========================================= */
-
-@keyframes infoIconBlueBlink{
-
-  0%,100%{
-    color:#3d8bff;
-
-    opacity:.75;
-
-    transform:scale(1);
-
-    filter:
-      drop-shadow(0 0 3px rgba(61,139,255,.45))
-      drop-shadow(0 0 7px rgba(30,110,245,.20));
-  }
-
-  45%{
-    color:#5ca0ff;
-
-    opacity:1;
-
-    transform:scale(1.06);
-
-    filter:
-      drop-shadow(0 0 6px rgba(61,139,255,.85))
-      drop-shadow(0 0 14px rgba(30,110,245,.50))
-      drop-shadow(0 0 22px rgba(30,110,245,.25));
-  }
-
-  55%{
-    color:#8fc3ff;
-
-    opacity:1;
-
-    transform:scale(1.10);
-
-    filter:
-      drop-shadow(0 0 8px rgba(143,195,255,1))
-      drop-shadow(0 0 18px rgba(61,139,255,.75))
-      drop-shadow(0 0 28px rgba(30,110,245,.35));
-  }
-
-  65%{
-    color:#3d8bff;
-
-    opacity:.8;
-
-    transform:scale(1);
-
-    filter:
-      drop-shadow(0 0 4px rgba(61,139,255,.55))
-      drop-shadow(0 0 9px rgba(30,110,245,.25));
-  }
-}
-
-
-/* =========================================
-   HOVER ICON LEBIH TERANG
-   ========================================= */
-
-.info-row dt:hover .icon{
-  color:#8fc3ff;
-
-  transform:scale(1.12);
-
-  filter:
-    drop-shadow(0 0 7px rgba(143,195,255,1))
-    drop-shadow(0 0 16px rgba(61,139,255,.8))
-    drop-shadow(0 0 25px rgba(30,110,245,.4));
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media(max-width:640px){
-
-  .info-row dt{
-    color:#ffffff;
-  }
-
-  .info-row dd{
-    color:#ffffff;
-  }
-
-}
-
-/* =================================================
-   HEADER LOGIN & DAFTAR
-   STYLE SAMA + ANIMASI PREMIUM
-   ================================================= */
-
-.header-cta .btn{
-  position:relative;
-  overflow:hidden;
-
-  min-width:88px;
-  height:40px;
-  padding:9px 16px;
-
-  border-radius:9px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(30,110,245,.16),
-      rgba(30,110,245,.06)
-    );
-
-  color:#ffffff;
-
-  border:1px solid rgba(61,139,255,.65);
-
-  box-shadow:
-    0 4px 14px rgba(30,110,245,.18),
-    inset 0 1px 0 rgba(255,255,255,.10);
-
-  transition:
-    transform .2s ease,
-    background .25s ease,
-    border-color .25s ease,
-    box-shadow .25s ease,
-    color .25s ease,
-    filter .25s ease;
-}
-
-
-/* =========================================
-   EFEK CAHAYA BERGERAK
-   ========================================= */
-
-.header-cta .btn::before{
-  content:"";
-
-  position:absolute;
-  top:0;
-  left:-120%;
-
-  width:65%;
-  height:100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255,255,255,.45),
-      transparent
-    );
-
-  transform:skewX(-20deg);
-
-  pointer-events:none;
-
-  transition:left .55s ease;
-}
-
-
-/* =========================================
-   SAAT CURSOR / JARI MENYENTUH
-   ========================================= */
-
-.header-cta .btn:hover{
-  background:
-    linear-gradient(
-      180deg,
-      #3d8bff,
-      #1e6ef5 55%,
-      #0a47c2
-    );
-
-  border-color:#69a5ff;
-
-  color:#ffffff;
-
-  transform:translateY(-3px) scale(1.04);
-
-  box-shadow:
-    0 8px 22px rgba(30,110,245,.45),
-    0 0 18px rgba(30,110,245,.25),
-    inset 0 1px 0 rgba(255,255,255,.35);
-
-  filter:brightness(1.08);
-}
-
-
-/* CAHAYA MENYAPU */
-
-.header-cta .btn:hover::before{
-  left:140%;
-}
-
-
-/* =========================================
-   SAAT DITEKAN / DISENTUH HP
-   ========================================= */
-
-.header-cta .btn:active{
-  transform:translateY(1px) scale(.94);
-
-  background:
-    linear-gradient(
-      180deg,
-      #1e6ef5,
-      #0a47c2
-    );
-
-  border-color:#75adff;
-
-  box-shadow:
-    0 3px 8px rgba(30,110,245,.35),
-    inset 0 2px 5px rgba(0,0,0,.25);
-
-  filter:brightness(.98);
-}
-
-
-/* =========================================
-   ICON DAFTAR
-   ========================================= */
-
-.header-cta .btn .icon{
-  width:17px;
-  height:17px;
-
-  transition:
-    transform .2s ease,
-    filter .2s ease;
-}
-
-.header-cta .btn:hover .icon{
-  transform:scale(1.12);
-
-  filter:
-    drop-shadow(0 0 4px rgba(255,255,255,.7));
-}
-
-
-/* =========================================
-   AKTIF / FOCUS
-   ========================================= */
-
-.header-cta .btn:focus-visible{
-  outline:none;
-
-  box-shadow:
-    0 0 0 3px rgba(61,139,255,.22),
-    0 8px 22px rgba(30,110,245,.4);
-}
-
-
-/* =========================================
-   HP
-   ========================================= */
-
-@media(max-width:640px){
-
-  .header-cta .btn{
-    min-width:82px;
-    height:39px;
-    padding:8px 13px;
-    font-size:.78rem;
-  }
-
-  .header-cta .btn:active{
-    transform:scale(.93);
-  }
-
-}
-
-
-
-  
   .section-head .rule::before,.section-head .rule::after{
     content:"";width:44px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold));
   }
@@ -1418,135 +227,14 @@
   footer{border-top:1px solid var(--line-soft);margin-top:24px;padding:34px 0 26px;background:rgba(8,20,48,.4)}
   .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
   .foot-feats{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-feat{display:flex;align-items:center;gap:9px;font-size:.8rem;color:var(--text-dim)}
+  .foot-feat .icon{color:var(--gold)}
   .foot-note{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.75rem;color:var(--text-dim)}
   .age-badge{
     display:inline-flex;align-items:center;justify-content:center;
     width:30px;height:30px;border-radius:50%;border:1.5px solid var(--text-dim);
     font-weight:700;font-size:.72rem;
   }
-  
-  /* =========================================
-   FOOTER FEATURES
-   ICON BIRU BERKEDIP + TEXT PUTIH
-   ========================================= */
-
-.foot-feat{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  font-size:.8rem;
-
-  /* TEXT SEMUA PUTIH */
-  color:#ffffff;
-}
-
-/* ICON / LAMBANG BIRU */
-.foot-feat .icon{
-  color:#3d8bff;
-  flex-shrink:0;
-
-  filter:
-    drop-shadow(0 0 4px rgba(61,139,255,.65))
-    drop-shadow(0 0 9px rgba(30,110,245,.35));
-
-  animation:footerIconBlueBlink 2.2s ease-in-out infinite;
-
-  transition:
-    color .3s ease,
-    filter .3s ease,
-    transform .3s ease;
-}
-
-
-/* =========================================
-   ANIMASI ICON BIRU
-   ========================================= */
-
-@keyframes footerIconBlueBlink{
-
-  /* NORMAL */
-  0%,100%{
-    color:#3d8bff;
-    opacity:.75;
-    transform:scale(1);
-
-    filter:
-      drop-shadow(0 0 3px rgba(61,139,255,.45))
-      drop-shadow(0 0 7px rgba(30,110,245,.20));
-  }
-
-  /* MULAI MENYALA */
-  40%{
-    color:#5ca0ff;
-    opacity:1;
-    transform:scale(1.05);
-
-    filter:
-      drop-shadow(0 0 6px rgba(61,139,255,.85))
-      drop-shadow(0 0 14px rgba(30,110,245,.50));
-  }
-
-  /* CAHAYA PALING TERANG */
-  52%{
-    color:#8fc3ff;
-    opacity:1;
-    transform:scale(1.10);
-
-    filter:
-      drop-shadow(0 0 8px rgba(143,195,255,1))
-      drop-shadow(0 0 18px rgba(61,139,255,.75))
-      drop-shadow(0 0 28px rgba(30,110,245,.35));
-  }
-
-  /* KEMBALI NORMAL */
-  65%{
-    color:#3d8bff;
-    opacity:.8;
-    transform:scale(1);
-
-    filter:
-      drop-shadow(0 0 4px rgba(61,139,255,.55))
-      drop-shadow(0 0 9px rgba(30,110,245,.25));
-  }
-}
-
-
-/* =========================================
-   HOVER
-   ========================================= */
-
-.foot-feat:hover .icon{
-  color:#9bc8ff;
-  transform:scale(1.12);
-
-  filter:
-    drop-shadow(0 0 7px rgba(143,195,255,1))
-    drop-shadow(0 0 16px rgba(61,139,255,.8))
-    drop-shadow(0 0 25px rgba(30,110,245,.4));
-}
-
-
-/* TEXT TETAP PUTIH SAAT HOVER */
-.foot-feat:hover{
-  color:#ffffff;
-}
-
-
-/* =========================================
-   HP
-   ========================================= */
-
-@media(max-width:640px){
-
-  .foot-feat{
-    color:#ffffff;
-  }
-
-  .foot-feat .icon{
-    color:#3d8bff;
-  }
-
-}
 
   /* ===== Modal ===== */
   .modal-overlay{
@@ -1611,8 +299,6 @@
   }
   .input:focus{border-color:var(--gold)}
   textarea.input{resize:vertical;min-height:72px}
-  .prize-editor{display:grid;grid-template-columns:1fr 100px;gap:8px;margin-bottom:8px;align-items:center}
-  .prize-editor span{font-size:.72rem;color:var(--text-dim)}
   .form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 
   /* ===== Riwayat ===== */
@@ -1655,7 +341,6 @@
     .modal-amount{font-size:1.6rem}
     .trust-row{gap:8px}
     .trust-item{font-size:.74rem;padding:8px 12px}
-    .prize-editor{grid-template-columns:1fr 84px}
   }
 
   /* ===== Hasil langsung di panel roda ===== */
@@ -1696,116 +381,90 @@
 <body>
 <header>
   <div class="header-in">
-    
+    <a class="brand" href="#top">
+      <span class="brand-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M2.5 18.5 5 7.5l4.4 4.9L12 4.8l2.6 7.6L19 7.5l2.5 11h-19zm.8 1.7h17.4v1.6H3.3v-1.6z"/></svg>
+      </span>
+      <span class="brand-name">LIGA<span>BANDAR</span></span>
+    </a>
     <div class="header-cta">
-      <a class="btn btn-outline" href="https://ligabandar13.com/">Login</a>
-
-      <a class="btn btn-primary" href="https://ligabandar13.com/register">
-        <svg class="icon" viewBox="0 0 24 24">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M19 8v6M22 11h-6"/>
-        </svg>
+      <a class="btn btn-outline" href="index.html">Beranda</a>
+      <a class="btn btn-primary" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
         Daftar
       </a>
     </div>
-
   </div>
 </header>
 
 <main id="top">
-<!-- HERO -->
 
-     <div class="hero-logo">
-  <img src="https://i.ibb.co/KcjkYbQt/images-removebg-preview.png" alt="LIGABANDAR">
-</div>
-    
-    <div class="trust-row">
-      <span class="trust-item">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
-        Transaksi 1-3 Menit
-      </span>
-      <span class="trust-item">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        100% Aman
-      </span>
-      <span class="trust-item">
-        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M15.5 9.2c-.6-1-1.9-1.7-3.5-1.7-2 0-3.5 1-3.5 2.5S10 12.4 12 12.7s3.5.9 3.5 2.4-1.5 2.6-3.5 2.6c-1.6 0-2.9-.7-3.5-1.7"/></svg>
-        Tanpa Biaya Admin
-      </span>
-      <span class="trust-item">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-        Support 24 Jam
-      </span>
-    </div>
-  </div>
-  
-    <!-- RUNNING TEXT -->
-  <div class="running-text" aria-label="Informasi LIGABANDAR">
-    <div class="running-track">
-
-      <div class="running-item">
-        <span class="running-icon">✦</span>
-        <span>
-          <strong>LIGABANDAR</strong> adalah platform digital yang mengutamakan kualitas pengalaman pengguna melalui layanan yang terus berkembang, tampilan yang intuitif, dan sistem yang dirancang secara menyeluruh.
-        </span>
-      </div>
-
-      <div class="running-item">
-        <span class="running-icon">✦</span>
-        <span>
-          <strong>LIGABANDAR</strong> adalah platform digital yang mengutamakan kualitas pengalaman pengguna melalui layanan yang terus berkembang, tampilan yang intuitif, dan sistem yang dirancang secara menyeluruh.
-        </span>
-      </div>
-
-    </div>
-  </div>
-  
-  <div class="hero-cta">
-      <a class="btn btn-gold btn-lg" href="spin.html">
-        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M12 8v8M8 12h8"/></svg>
-        Daftar &amp; Putar Sekarang
-        <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-      </a>
-    </div>
-
-  <!-- INFO -->
-  <section>
+  <!-- SPIN WHEEL -->
+  <section id="spinwheel">
     <div class="wrap">
       <div class="section-head">
-      <div class="info-card">
-        <div class="info-card-head">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M2.5 18.5 5 7.5l4.4 4.9L12 4.8l2.6 7.6L19 7.5l2.5 11h-19z"/></svg>
-          Informasi Situs LIGABANDAR
-        </div>
-        <dl>
-          <div class="info-row">
-            <dt><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>Server Web</dt>
-            <dd>Terpercaya NO 1 Sea Asia</dd>
-          </div>
-          <div class="info-row">
-            <dt><svg class="icon" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>Minimal Depo Qris</dt>
-            <dd>Rp 10.000</dd>
-          </div>
-          <div class="info-row">
-            <dt><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Metode Deposit</dt>
-            <dd>Transfer Bank, E-Wallet, QRIS</dd>
-          </div>
-          <div class="info-row">
-            <dt><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Jam Operasional</dt>
-            <dd>24 Jam setiap hari, nonstop</dd>
-          </div>
-          <div class="info-row">
-            <dt><svg class="icon" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>Customer Service</dt>
-            <dd>Live chat &amp; WhatsApp, support 24 jam</dd>
-          </div>
-        </dl>
+        <span class="rule">Hadiah New Member</span>
+        <h2>Putar Roda, Dapatkan Saldo</h2>
+        <p>Tekan tombol PUTAR. Roda akan menentukan jumlah saldo bonus kamu.</p>
       </div>
 
+      <div class="wheel-panel">
+        <div class="wheel-stage">
+          <div class="pointer" aria-hidden="true"></div>
+          <svg id="wheelSvg" viewBox="0 0 400 400" role="img" aria-label="Roda hadiah Spin Wheel"></svg>
+          <button class="spin-btn" id="spinBtn" type="button">PUTAR</button>
+        </div>
+
+        <div class="result-banner" id="resultBanner" role="status" aria-live="polite">
+          <span class="result-label">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M6 2h12v2h4v3a5 5 0 0 1-4.6 5A6 6 0 0 1 13 15.9V18h3a2 2 0 0 1 2 2v2H6v-2a2 2 0 0 1 2-2h3v-2.1A6 6 0 0 1 6.6 12 5 5 0 0 1 2 7V4h4V2z"/></svg>
+            Saldo bonus yang kamu dapatkan
+          </span>
+          <div class="result-amount" id="resultAmount">Rp 0</div>
+          <p class="result-note">Klaim saldo ini di website utama sebelum kedaluwarsa.</p>
+        </div>
+
+        <div class="wheel-result">
+          <div class="saldo-chip" id="saldoChip">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+            Saldo bonus kamu: <strong id="saldoValue">Rp 0</strong>
+          </div>
+          <div class="claim-area" id="claimArea">
+            <a class="btn btn-gold btn-lg btn-block" id="claimBtn" href="#" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+              Claim Sekarang
+              <svg class="icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="prize-strip" id="prizeStrip"></div>
+      </div>
     </div>
   </section>
 
-
+  <!-- RIWAYAT & TANYA -->
+  <section id="riwayat">
+    <div class="wrap grid-2">
+      <div class="card">
+        <h3>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2.5-3 2.5"/><path d="M12 16h.01"/></svg>
+          Tanya Seputar Promo
+        </h3>
+        <p class="card-sub">Ajukan pertanyaan tentang hadiah atau ketentuan promo, jawaban dibuat otomatis dari data promo di halaman ini.</p>
+        <form class="ask-row" id="askForm">
+          <label class="sr-only" for="askInput">Pertanyaan tentang promo</label>
+          <input class="input" id="askInput" type="text" maxlength="300" placeholder="Contoh: Berapa hadiah terbesarnya?" autocomplete="off" />
+          <button class="btn btn-primary" id="askBtn" type="submit">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+            Tanya
+          </button>
+        </form>
+        <div class="ask-chips" id="askChips"></div>
+        <div class="ask-answer" id="askAnswer" role="status" aria-live="polite" hidden></div>
+      </div>
+    </div>
+  </section>
 
 </main>
 <footer>
@@ -1841,48 +500,31 @@
   </div>
 </footer>
 
-<!-- PANEL KONFIGURASI -->
-<div class="modal-overlay" id="configOverlay" role="dialog" aria-modal="true" aria-labelledby="configTitle">
-  <div class="modal modal-wide">
-    <h3 id="configTitle" style="font-size:1.1rem">Panel Konfigurasi</h3>
-    <p style="color:var(--text-dim);font-size:.82rem;margin:8px 0 18px">Ubah link website utama, hadiah, bobot peluang, dan teks promosi. Tersimpan di browser ini.</p>
-    <form id="configForm">
-      <div class="field">
-        <label for="cfgUrl">URL Website Utama</label>
-        <input class="input" id="cfgUrl" type="url" placeholder="https://contoh.com" required />
-      </div>
-      <div class="field">
-        <label for="cfgTitle">Judul Promosi</label>
-        <input class="input" id="cfgTitle" type="text" />
-      </div>
-      <div class="field">
-        <label for="cfgTagline">Label Kecil di Atas Judul</label>
-        <input class="input" id="cfgTagline" type="text" />
-      </div>
-      <div class="field">
-        <label for="cfgDesc">Teks Promosi</label>
-        <textarea class="input" id="cfgDesc"></textarea>
-      </div>
-      <div class="field">
-        <label>Hadiah &amp; Bobot Peluang</label>
-        <div class="prize-editor"><span>Nominal (Rp)</span><span>Bobot</span></div>
-        <div id="cfgPrizes"></div>
-      </div>
-      <div class="form-actions">
-        <button class="btn btn-gold" type="submit">Simpan Perubahan</button>
-        <button class="btn btn-outline" id="cfgReset" type="button">Kembalikan Default</button>
-        <button class="btn btn-outline" id="cfgClose" type="button">Tutup</button>
-      </div>
-    </form>
+<!-- MODAL HASIL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-trophy" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M6 2h12v2h4v3a5 5 0 0 1-4.6 5A6 6 0 0 1 13 15.9V18h3a2 2 0 0 1 2 2v2H6v-2a2 2 0 0 1 2-2h3v-2.1A6 6 0 0 1 6.6 12 5 5 0 0 1 2 7V4h4V2zm-2 5a3 3 0 0 0 2 2.8V7H4zm16 0h-2v2.8A3 3 0 0 0 20 7z"/></svg>
+    </div>
+    <h3 id="modalTitle">Selamat, Kamu Menang!</h3>
+    <p>Roda berhenti dan saldo bonus kamu sudah ditentukan:</p>
+    <div class="modal-amount" id="modalAmount">Rp 0</div>
+    <p class="modal-sub">Klik tombol di bawah untuk klaim di website utama.</p>
+    <a class="btn btn-gold btn-lg btn-block" id="modalClaimBtn" href="#" target="_blank" rel="noopener">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+      Claim Sekarang
+    </a>
+    <button class="btn btn-outline btn-block" id="modalClose" type="button" style="margin-top:10px">Tutup</button>
   </div>
 </div>
-
 
 <script>
 /* ================= KONFIGURASI DEFAULT ================= */
 var DEFAULTS = {
   mainSiteUrl: "https://ligabandar13.com/",
+  tagline: "FREECHIP LIGABANDAR",
   title: "Spin Wheel Putar & Menang",
+  description: "Kesempatan mendapatkan saldo bonus new member hingga Rp 100.000. Satu kali putar, langsung tentukan saldo kamu \u2014 klaim di website utama sekarang.",
   prizes: [
     { label: "35.000",  weight: 30, color: "#1971c2", text: "#ffffff" },
     { label: "45.000",  weight: 24, color: "#f59f00", text: "#3a2600" },
@@ -2015,6 +657,8 @@ function applyConfig() {
   if (modalClaimBtn) modalClaimBtn.href = CONFIG.mainSiteUrl;
   document.querySelectorAll("[data-main-site]").forEach(function (a) { a.href = CONFIG.mainSiteUrl; });
 
+  var kicker = document.querySelector(".hero-kicker");
+  if (kicker) kicker.lastChild.textContent = " " + CONFIG.tagline + " ";
   var h1 = document.querySelector(".hero h1");
   if (h1) h1.textContent = CONFIG.title;
   var hp = document.querySelector(".hero p");
@@ -2161,83 +805,6 @@ if (modalOverlay) modalOverlay.addEventListener("click", function (ev) {
   if (ev.target === modalOverlay) closeModal();
 });
 
-/* ================= PANEL KONFIGURASI ================= */
-var configOverlay = document.getElementById("configOverlay");
-var configForm = document.getElementById("configForm");
-var cfgPrizes = document.getElementById("cfgPrizes");
-var cfgUrl = document.getElementById("cfgUrl");
-var cfgTitle = document.getElementById("cfgTitle");
-var cfgTagline = document.getElementById("cfgTagline");
-var cfgDesc = document.getElementById("cfgDesc");
-var lastConfigFocus = null;
-
-function fillConfigForm(cfg) {
-  cfgUrl.value = cfg.mainSiteUrl;
-  cfgTitle.value = cfg.title;
-  cfgTagline.value = cfg.tagline;
-  cfgDesc.value = cfg.description;
-  cfgPrizes.innerHTML = "";
-  cfg.prizes.forEach(function (p, i) {
-    var row = document.createElement("div");
-    row.className = "prize-editor";
-    var a = document.createElement("input");
-    a.className = "input"; a.type = "text"; a.value = p.label;
-    a.setAttribute("aria-label", "Nominal hadiah " + (i + 1));
-    var b = document.createElement("input");
-    b.className = "input"; b.type = "number"; b.min = "1"; b.value = p.weight;
-    b.setAttribute("aria-label", "Bobot peluang hadiah " + (i + 1));
-    row.appendChild(a); row.appendChild(b);
-    cfgPrizes.appendChild(row);
-  });
-}
-function openConfig() {
-  fillConfigForm(CONFIG);
-  lastConfigFocus = document.activeElement;
-  configOverlay.classList.add("open");
-  cfgUrl.focus();
-}
-function closeConfig() {
-  configOverlay.classList.remove("open");
-  if (lastConfigFocus && lastConfigFocus.focus) lastConfigFocus.focus();
-}
-document.getElementById("openConfig").addEventListener("click", openConfig);
-document.getElementById("cfgClose").addEventListener("click", closeConfig);
-configOverlay.addEventListener("click", function (ev) {
-  if (ev.target === configOverlay) closeConfig();
-});
-document.getElementById("cfgReset").addEventListener("click", function () {
-  localStorage.removeItem(KEYS.config);
-  CONFIG = loadConfig();
-  applyConfig();
-  fillConfigForm(CONFIG);
-});
-configForm.addEventListener("submit", function (ev) {
-  ev.preventDefault();
-  var rows = cfgPrizes.querySelectorAll(".prize-editor");
-  var prizes = [];
-  for (var i = 0; i < rows.length; i++) {
-    var inputs = rows[i].querySelectorAll("input");
-    var label = inputs[0].value.trim() || DEFAULTS.prizes[i].label;
-    prizes.push({ label: label, weight: Math.max(1, parseInt(inputs[1].value, 10) || 1) });
-  }
-  localStorage.setItem(KEYS.config, JSON.stringify({
-    mainSiteUrl: cfgUrl.value.trim() || DEFAULTS.mainSiteUrl,
-    title: cfgTitle.value.trim() || DEFAULTS.title,
-    tagline: cfgTagline.value.trim() || DEFAULTS.tagline,
-    description: cfgDesc.value.trim() || DEFAULTS.description,
-    prizes: prizes
-  }));
-  CONFIG = loadConfig();
-  applyConfig();
-  closeConfig();
-});
-
-document.addEventListener("keydown", function (ev) {
-  if (ev.key !== "Escape") return;
-  if (modalOverlay && modalOverlay.classList.contains("open")) closeModal();
-  if (configOverlay && configOverlay.classList.contains("open")) closeConfig();
-});
-
 /* ================= TANYA SEPUTAR PROMO ================= */
 var askForm = document.getElementById("askForm");
 var askInput = document.getElementById("askInput");
@@ -2259,7 +826,7 @@ function promoContext() {
     "Daftar hadiah saldo bonus: " + CONFIG.prizes.map(function (p) { return p.display; }).join(", "),
     "Jumlah segmen roda: " + CONFIG.prizes.length,
     "Website utama untuk klaim: " + CONFIG.mainSiteUrl,
-    "Ketentuan: satu kali putar menentukan saldo bonus new member; klaim dilakukan di website utama; minimal deposit qris Rp 10.000; metode deposit transfer bank, e-wallet, QRIS; layanan 24 jam; khusus usia 18 tahun ke atas.",
+    "Ketentuan: satu kali putar menentukan saldo bonus new member; klaim dilakukan di website utama; minimal deposit Rp 25.000; metode deposit transfer bank, e-wallet, QRIS; layanan 24 jam; khusus usia 18 tahun ke atas.",
     "Riwayat putaran pengunjung tersimpan hanya di browser mereka."
   ].join("\n");
 }
